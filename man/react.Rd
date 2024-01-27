@@ -11,11 +11,24 @@ An object of class \code{react} of length 0.
 react
 }
 \description{
-The \code{react} object allow you to use the \code{react$foo} syntax
-instead of calling \code{foo()}.
+The \code{react} object gives alternative syntax to call
+shiny reactive expressions.
 }
 \details{
-The benefit is that it makes it easier to identify calls to reactive
-expressions and take them apart from calls to functions.
+The benefit is that it makes them easier to spot in your code
+}
+\examples{
+\dontrun{
+  # imagine you have some shiny reactive
+  foo <- reactive({
+    whatever() + something()
+  })
+
+  # react allows you to call it in 3 different ways
+  # instead of the usual foo() form
+  react$foo
+  react[foo]
+  react[foo()]
+}
 }
 \keyword{datasets}
