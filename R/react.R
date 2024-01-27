@@ -3,7 +3,7 @@
 #' The `react` object gives alternative syntax to call
 #' shiny reactive expressions.
 #'
-#' The benefit is that it makes them easier to spot in your code
+#' The benefit is that it makes them easier to spot in your code.
 #'
 #' @examples
 #' \dontrun{
