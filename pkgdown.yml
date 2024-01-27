@@ -2,8 +2,8 @@ pandoc: 2.19.2
 pkgdown: 2.0.7
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-01-27T09:30Z
+last_built: 2024-01-27T11:16Z
 urls:
-  reference: http://react.tada.science/reference
-  article: http://react.tada.science/articles
+  reference: http://tada.science/react/reference
+  article: http://tada.science/react/articles
 
