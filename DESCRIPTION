@@ -13,5 +13,5 @@ Imports:
     cli,
     glue,
     rlang
-URL: https://github.com/tadascience/react
+URL: https://github.com/tadascience/react, http://react.tada.science/
 BugReports: https://github.com/tadascience/react/issues
