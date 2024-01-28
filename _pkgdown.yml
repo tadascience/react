@@ -1,4 +1,4 @@
-url: http://react.tada.science/
+url: https://tada.science/react/
 template:
   bootstrap: 5
-
+  bootswatch: materia
