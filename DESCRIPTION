@@ -1,10 +1,9 @@
 Package: react
 Title: Reactivity Helper for 'shiny'
-Version: 2024.1.1
+Version: 2024.1.0
 Authors@R: 
-    person("Romain", "François", email = "romain@tada.science", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-2444-4226"))
-Description: Tools to help with shiny reactivity. The 'react' object offers
+    person("Romain", "François", email = "romain@tada.science", role = c("aut", "cre"))
+Description: Tools to help with 'shiny' reactivity. The 'react' object offers
     an alternative way to call reactive expressions to better identify them
     in the server code. 
 License: MIT + file LICENSE

@@ -18,17 +18,33 @@ shiny reactive expressions.
 The benefit is that it makes them easier to spot in your code.
 }
 \examples{
-\dontrun{
-  # imagine you have some shiny reactive
-  foo <- reactive({
-    whatever() + something()
-  })
+# This works by invoking the function from the parent environment
+# with no arguments ...
+foo <- function() {
+  42
+}
+react$foo
+react[foo]
+react[foo()]
 
-  # react allows you to call it in 3 different ways
-  # instead of the usual foo() form
-  react$foo
-  react[foo]
-  react[foo()]
+\dontrun{
+  # ... but it only becomes relevant when used in shiny
+  # server code, e.g. this app from the shiny page
+  # with react$dataInput instead of dataInput()
+  server <- function(input, output) {
+
+    dataInput <- reactive({
+      getSymbols(input$symb, src = "yahoo",
+          from = input$dates[1],
+            to = input$dates[2],
+            auto.assign = FALSE)
+    })
+
+    output$plot <- renderPlot({
+       chartSeries(react$dataInput, theme = chartTheme("white"),
+              type = "line", log.scale = input$log, TA = NULL)
+    })
+  }
 }
 }
 \keyword{datasets}
