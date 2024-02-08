@@ -15,6 +15,13 @@
 #' react[foo]
 #' react[foo()]
 #'
+#' # You can also use `react()` as a function to wrap the
+#' # reactive call
+#' react(foo())
+#'
+#' # The benefit is that `react()` can also wrap `input$` calls
+#' # so that you easily recognize reactivity
+#'
 #' \dontrun{
 #'   # ... but it only becomes relevant when used in shiny
 #'   # server code, e.g. this app from the shiny page
@@ -35,7 +42,7 @@
 #'   }
 #' }
 #' @export
-react <- structure(list(), class = "react")
+react <- structure(function(x) x, class = "react")
 
 `%or%` <- function(x, y) {
   tryCatch(x, error = function(e) y)
