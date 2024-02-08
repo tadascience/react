@@ -54,13 +54,9 @@ shiny reactive expressions.</p>
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="va">react</span></span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">react</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
     </div>
 
-    <div class="section level2">
-    <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>An object of class <code>react</code> of length 0.</p>
-    </div>
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The benefit is that it makes them easier to spot in your code.</p>
@@ -79,6 +75,14 @@ shiny reactive expressions.</p>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get(as.character(expr, frame)):</span> object 'foo' not found</span>
 <span class="r-in"><span><span class="va">react</span><span class="op">[</span><span class="fu">foo</span><span class="op">(</span><span class="op">)</span><span class="op">]</span></span></span>
 <span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in get(as.character(expr[[1L]], frame)):</span> object 'foo' not found</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># You can also use `react()` as a function to wrap the</span></span></span>
+<span class="r-in"><span><span class="co"># reactive call</span></span></span>
+<span class="r-in"><span><span class="fu">react</span><span class="op">(</span><span class="fu">foo</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 42</span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="co"># The benefit is that `react()` can also wrap `input$` calls</span></span></span>
+<span class="r-in"><span><span class="co"># so that you easily recognize reactivity</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span></span></span>
 <span class="r-in"><span>  <span class="co"># ... but it only becomes relevant when used in shiny</span></span></span>
