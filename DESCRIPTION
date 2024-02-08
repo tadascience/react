@@ -1,6 +1,6 @@
 Package: react
 Title: Reactivity Helper for 'shiny'
-Version: 2024.1.0
+Version: 2024.1.0.9000
 Authors@R: 
     person("Romain", "François", email = "romain@tada.science", role = c("aut", "cre"))
 Description: Tools to help with 'shiny' reactivity. The 'react' object offers
