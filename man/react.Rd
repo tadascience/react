@@ -6,6 +6,9 @@
 \usage{
 react(x)
 }
+\arguments{
+\item{x}{the reactive call}
+}
 \description{
 The \code{react} object gives alternative syntax to call
 shiny reactive expressions.

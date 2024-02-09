@@ -5,6 +5,8 @@
 #'
 #' The benefit is that it makes them easier to spot in your code.
 #'
+#' @param x the reactive call
+#'
 #' @examples
 #' # This works by invoking the function from the parent environment
 #' # with no arguments ...
